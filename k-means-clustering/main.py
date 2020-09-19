@@ -35,10 +35,8 @@ print(model.cluster_centers_)
 
 
 def getClusterType(cluster):
-    if cluster=='Yes':
-        return 1
-    else:
-        return 0
+    return 1 if cluster=='Yes' else 0
+
 
 data['cluster'] = data['Private'].apply(getClusterType)
 
